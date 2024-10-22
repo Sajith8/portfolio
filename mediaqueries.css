@@ -1,0 +1,137 @@
+/* Media Queries */
+
+/* Desktop view */
+@media (min-width: 1024px) {
+  /* Desktop-specific styles */
+  #hamburger-nav {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: flex;
+  }
+
+  #profile {
+    height: 80vh;
+  }
+
+  .about-details-container {
+    margin: 0 10rem;
+  }
+
+  .skills-details-container {
+    margin: 0 4rem;
+  }
+
+  footer {
+    margin: 0 10rem;
+  }
+}
+
+/* Small laptop view */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Small laptop-specific styles */
+  #hamburger-nav {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: flex;
+  }
+
+  .about-details-container {
+    margin: 0 5rem;
+  }
+
+  .skills-details-container {
+    margin: 0 2rem;
+  }
+
+  footer {
+    margin: 0 5rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  /* Mobile-specific styles */
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 5%;
+  }
+
+  .hamburger-icon {
+    width: 2.5rem;
+    height: 1rem;
+  }
+
+  .menu-links {
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    background-color: white;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  .menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-links li {
+    list-style: none;
+  }
+
+  .menu-links.open {
+    max-height: 300px;
+  }
+
+  .hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .section-container,
+  .about-details-container,
+  .skills-details-container {
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+
+  .details-container,
+  .color-container {
+    padding: 3rem;
+    margin: 1rem 0;
+  }
+
+  .project-img {
+    width: 100%;
+  }
+
+  footer {
+    margin: 0 1rem;
+  }
+}
